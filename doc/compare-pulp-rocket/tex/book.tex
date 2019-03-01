@@ -1,0 +1,148 @@
+\documentclass{../custom_packages} % deficao da classe e das opcoes do documento
+\begin{document}
+	
+%%% *******************************
+%%% Capa
+%%% *******************************
+\include{capa}
+
+%%% *******************************
+%%% Sumário 
+%%% *******************************
+\cftsetindents{section}{0em}{2em}
+\cftsetindents{subsection}{0em}{2em}
+
+
+\renewcommand\lfttoctitlefont{\hfill\Large\bfseries}
+\renewcommand\lftaftertoctitle{\hfill\mbox{}}
+
+\tableofcontents
+\thispagestyle{empty}
+\newpage
+\thispagestyle{empty}
+%%% *******************************
+%%% Lista de Figuras e Tabelas
+%%% *******************************
+\listoffigures
+\thispagestyle{empty}
+\newpage
+
+%\pagestyle{fancy}
+%\setcounter{page}{1}
+%\thispagestyle{empty}
+%\listoftable
+%\thispagestyle{empty}
+%\newpage
+
+\addtocontents{toc}{\protect\thispagestyle{empty}}
+\pagestyle{fancy}
+\setcounter{page}{1}
+
+%%% *******************************
+%%% Capitulos
+%%% *******************************
+\include{int}
+\include{ref}
+
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%
+%%% FIGURA %%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%
+%\begin{figure}[H]
+% \centering
+% \begin{small}
+%    \includegraphics[scale=.9]{grafico.jpg}
+% \end{small}
+%  \caption{Gráfico dos valores obtidos no experimento}
+%  \label{fig:grafico}
+%\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%
+%%% ITEMS %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%
+%\begin{itemize}
+%  \item Controle ON/OFF de postes de luz;
+%  \item Sistema de segurança (alarme) para shoppings, bancos, etc...
+%  \item Controle de intensidade de lâmpadas;
+%  \item Medidores de luz;
+%  \item Detectores de incêndio/fumaça;
+%\end{itemize} 
+
+%%%%%%%%%%%%%%%%%%%%%%%
+%%% EQUACAO %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{eqnarray}
+%TensaoX(\theta) = +1.5\sin(\theta)
+%TensaoY(\theta) = -1.5\sin(\theta)
+%\end{eqnarray}
+
+%%%%%%%%%%%%%%%%%%%%%%%
+%%% CODIGO %%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%
+%\makeatletter
+%\newenvironment{CenteredBox}{% 
+%\begin{Sbox}}{% Save the content in a box
+%\end{Sbox}\centerline{\parbox{\wd\@Sbox}{\TheSbox}}}% And output it centered
+%\makeatother
+
+%\begin{figure}[htb]
+%\begin{CenteredBox}
+%\begin{lstlisting}
+% code here
+%\end{lstlisting}
+%\end{CenteredBox}
+%\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%
+%%% TABELA %%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{table}[H] \footnotesize % Diminui tamanho de fonte na tabela
+%\centering
+%\begin{tabularx}{\textwidth}{| l | l | l |}
+%hline
+%\rowcolor[HTML]{EFEFEF}
+
+%Pseudonome & Componente & Função \\ \hline
+%Sensor de presença A & Sensor de obstáculo IR & Detectar usuário no nível superior \\ \hline
+%Sensor de presença B & Sensor de obstáculo IR & Detectar usuário no nível inferior \\ \hline
+%Motor para rotação & Motor de passo: ??? & Girar a parede de escalada \\ \hline
+%Driver motor rotação & Driver: ??? & Cria interface de controle MCU-Motor \\ \hline
+%Motor para inclinação & Motor de passo: ??? & Inclinar parede de escalada \\ \hline
+%Driver motor inclinação & Driver: ??? & Cria interface de controle MCU-Motor \\ \hline
+%Sensor de peso & Células de carga (50Kg) & Detectar usuário sobre piso \\ \hline
+%MCU & Microcontrolador PIC16F877A & Controlar todos os componentes elétricos \\ \hline
+
+%\end{tabularx}
+%\caption{BOM: Bill of Material para projeto em miniatura}
+%\label{tab:componentes_eletricos_mini}
+%\end{table}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% REFERENCIA %%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{thebibliography}{2}
+%\bibitem{ref1} Alberto Simões ,{\em Uma não tão pequena introdução ao \LaTeX},2007.
+%\bibitem{ref2} Autor do livro ,{\em Título do Livro}, Ano de edição,Editora,etc.
+%\end{thebibliography}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Histórico de Revisões %%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\section{Histórico de Revisões}
+
+%\begin{table}[h]
+%\centering
+%\begin{tabular}{|c|c|c|c|}
+%\hline
+%\rowcolor[HTML]{EFEFEF}
+
+%Date & Version & Description & Author \\ \hline
+%Data & Versão & Descrição & Autor \\ \hline
+%01/03/2017 & 1.0 & Initial Release & Gabriel Villanova\\ \hline
+%\end{tabular}
+%\end{table}
+
+% coloca em  branco o resto da página
+%\hfill 
+%\newpage
